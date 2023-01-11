@@ -44,3 +44,12 @@ Simple Bash script that uses the AWS CLI to start and stop an EC2 instance:
 In this script, the PROFILE variable is set to the name of the AWS profile you want to use and the INSTANCE_ID variable is set to the ID of the EC2 instance you want to start or stop. The script then uses the aws ec2 describe-instances command to check the current status of the instance, and based on that status, it uses the aws ec2 start-instances or aws ec2 stop-instances command to start or stop the instance.
 
 Make sure that the aws CLI has been configured and authorized, also you can use the --region option to specify the region where your instance is located, this can be helpful if you have multiple AWS accounts.
+
+# Simple_Scripts 005
+====================
+
+Simple Bash script that uses the Cloudflare API to clear the cache for a specific zone:
+
+In this script, the AUTH_EMAIL and AUTH_KEY variables are set to your Cloudflare account email and API key, respectively. The ZONE_ID variable is set to the ID of the zone for which you want to clear the cache. The script then uses the curl command to make a DELETE request to the Cloudflare API to clear the cache for the specified zone. The request includes the authentication headers and a JSON payload with the value {"purge_everything":true} to purge all files.
+
+Note that Cloudflare API has a rate limit, you should check it before using this script in a production environment.
