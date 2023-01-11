@@ -15,7 +15,8 @@ Here are some points to keep in mind when using mysqldump to backup RDS database
 AWS RDS also provides a built-in method to take backup of your RDS instance by creating a point-in-time snapshots of your RDS instances, which can be automated and scheduled as per your requirements.
 
 
-# Simple_Scripts 002  Python Script to check disk usage monitoring
+# Simple_Scripts 002
+====================
 
 Simple Python script that will check the disk usage on a Linux system and send an email alert if the usage exceeds a certain threshold:
 
@@ -26,10 +27,20 @@ The script first defines two functions: check_disk_usage and send_alert_email. c
 Finally, the script calls check_disk_usage and passes it the root filesystem '/' and a threshold of 90%. If the disk usage exceeds 90%, it sends an email using send_alert_email function.
 
 
-# Simple_Scripts 003  Python Script to monitor the standalon docker container
+# Simple_Scripts 003  
+====================
 
 Simple script in Python that you can use to monitor a Docker container and restart it if it exits:
 
 In this script, the container_name variable is set to the name of the container you want to monitor. The script then enters an infinite loop, in which it uses the subprocess.run() function to run the docker ps command with the -f and -q options to check the status of the container. If the container is running, the script prints its status and sleeps for 5 seconds before checking again. If the container is not running, the script uses subprocess.run() to run the docker start command to start the container again and print a message to indicate that it has been restarted.
 
 You can customize this script to suit your needs. For example, You can set up sleep_time as a variable and change the command to use docker inspect command instead of docker ps to check container status. You can also add additional checks to handle scenarios such as container crashed or unable to restart after certain number of attempts.
+
+# Simple_Scripts 004 
+====================
+
+Simple Bash script that uses the AWS CLI to start and stop an EC2 instance:
+
+In this script, the PROFILE variable is set to the name of the AWS profile you want to use and the INSTANCE_ID variable is set to the ID of the EC2 instance you want to start or stop. The script then uses the aws ec2 describe-instances command to check the current status of the instance, and based on that status, it uses the aws ec2 start-instances or aws ec2 stop-instances command to start or stop the instance.
+
+Make sure that the aws CLI has been configured and authorized, also you can use the --region option to specify the region where your instance is located, this can be helpful if you have multiple AWS accounts.
