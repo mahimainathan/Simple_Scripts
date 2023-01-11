@@ -16,7 +16,7 @@ AWS RDS also provides a built-in method to take backup of your RDS instance by c
 
 
 # Simple_Scripts 002
-====================
+=========================
 
 Simple Python script that will check the disk usage on a Linux system and send an email alert if the usage exceeds a certain threshold:
 
@@ -28,7 +28,7 @@ Finally, the script calls check_disk_usage and passes it the root filesystem '/'
 
 
 # Simple_Scripts 003  
-====================
+=========================
 
 Simple script in Python that you can use to monitor a Docker container and restart it if it exits:
 
@@ -37,7 +37,7 @@ In this script, the container_name variable is set to the name of the container 
 You can customize this script to suit your needs. For example, You can set up sleep_time as a variable and change the command to use docker inspect command instead of docker ps to check container status. You can also add additional checks to handle scenarios such as container crashed or unable to restart after certain number of attempts.
 
 # Simple_Scripts 004 
-====================
+=========================
 
 Simple Bash script that uses the AWS CLI to start and stop an EC2 instance:
 
@@ -46,7 +46,7 @@ In this script, the PROFILE variable is set to the name of the AWS profile you w
 Make sure that the aws CLI has been configured and authorized, also you can use the --region option to specify the region where your instance is located, this can be helpful if you have multiple AWS accounts.
 
 # Simple_Scripts 005
-====================
+=========================
 
 Simple Bash script that uses the Cloudflare API to clear the cache for a specific zone:
 
