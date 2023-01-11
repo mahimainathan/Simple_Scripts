@@ -24,3 +24,12 @@ Note : if you use gmail as mail server to send email, then need to enable "less 
 The script first defines two functions: check_disk_usage and send_alert_email. check_disk_usage takes a path and a threshold as arguments and uses the os.statvfs function to get information about the file system at that path. It then calculates the percentage of the disk that is in use, and returns True if the usage exceeds the threshold, and False otherwise. The send_alert_email function uses the smtplib library to connect to an SMTP server (in this case, gmail) and send an email alerting the user to high disk usage.
 
 Finally, the script calls check_disk_usage and passes it the root filesystem '/' and a threshold of 90%. If the disk usage exceeds 90%, it sends an email using send_alert_email function.
+
+
+# Simple_Scripts 003  Python Script to monitor the standalon docker container
+
+Simple script in Python that you can use to monitor a Docker container and restart it if it exits:
+
+In this script, the container_name variable is set to the name of the container you want to monitor. The script then enters an infinite loop, in which it uses the subprocess.run() function to run the docker ps command with the -f and -q options to check the status of the container. If the container is running, the script prints its status and sleeps for 5 seconds before checking again. If the container is not running, the script uses subprocess.run() to run the docker start command to start the container again and print a message to indicate that it has been restarted.
+
+You can customize this script to suit your needs. For example, You can set up sleep_time as a variable and change the command to use docker inspect command instead of docker ps to check container status. You can also add additional checks to handle scenarios such as container crashed or unable to restart after certain number of attempts.
