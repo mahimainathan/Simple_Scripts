@@ -18,4 +18,4 @@ if [ $? -eq 0 ]; then
     echo "Backup succeeded"
 else
     echo "Backup failed"
-fi
+fi 
