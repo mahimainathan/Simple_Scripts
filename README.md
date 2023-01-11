@@ -15,7 +15,7 @@ Here are some points to keep in mind when using mysqldump to backup RDS database
 AWS RDS also provides a built-in method to take backup of your RDS instance by creating a point-in-time snapshots of your RDS instances, which can be automated and scheduled as per your requirements.
 
 
-# Simple_Scripts 002  Python Scripty to check disk usage monitoring
+# Simple_Scripts 002  Python Script to check disk usage monitoring
 
 Simple Python script that will check the disk usage on a Linux system and send an email alert if the usage exceeds a certain threshold:
 
